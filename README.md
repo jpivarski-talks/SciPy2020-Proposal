@@ -22,9 +22,19 @@ _(In the 2019 program, talks about a software library had this form: library nam
 
 _(The brief description which will appear in the online program and give attendees a basic sense of your talk. This should be around 100 words or less.)_
 
-NumPy simplifies and accelerates mathematical calculations in Python, but only for rectilinear arrays of numbers. Awkward Array provides a similar interface for JSON-like data: slicing, broadcasting, and performing vectorized math on the attributes of objects, unequal length nested lists, and heterogeneous data types. Awkward Arrays are columnar data structures, like (and convertible to/from) Apache Arrow, with a focus on manipulation, rather than serialization/transport. These arrays can be passed between C++ and Python, and they can be used in functions that are JIT-compiled by Numba.
+NumPy simplifies and accelerates mathematical calculations in Python, but only for rectilinear arrays of numbers. Awkward Array provides a similar interface for JSON-like data: slicing, broadcasting, and performing vectorized math on the attributes of objects, unequal-length nested lists, and heterogeneous data types. Awkward Arrays are columnar data structures, like (and convertible to/from) Apache Arrow, with a focus on manipulation, rather than serialization/transport. These arrays can be passed between C++ and Python, and they can be used in functions that are JIT-compiled by Numba.
 
 _(84 words)_
+
+## Audience
+
+_(Who is the intended audience for your talk?)_
+
+This talk is intended for data analysts, particularly those who are involved in cleaning data from complex sources, as well as developers who might need to build on or contribute to this library.
+
+_(What, specifically, will attendees learn from your talk?)_
+
+HERE
 
 ## The Abstract
 
