@@ -54,13 +54,11 @@ Just as NumPy's contiguous data structure is key to its performance, Awkward Arr
 
 ### Combinatorics
 
-In particle physics, we often need to iterate through combinations of objects, so vectorized functions for building Cartesian products and pairs without replacement have been added to Awkward Array. However, these turn out to be per-element cross-joins and inner-joins of our data, as though every element of an array were a collection of SQL tables.
-
-
+In particle physics, we often need to iterate through combinations of objects, so vectorized functions for building Cartesian products and pairs without replacement have been added to Awkward Array. These turn out to be per-element cross-joins and inner-joins, as though every element of an array were a collection of SQL tables.
 
 ### Creating Awkward Arrays
 
-It is often not enough to manipulate data structures
+It's not enough to manipulate data structures; sometimes they need to be generated from scratch. 
 
 
 ### C++ and Numba interfaces
