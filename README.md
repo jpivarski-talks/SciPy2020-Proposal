@@ -77,5 +77,5 @@ _(452 words.)_
 I have given three conference presentations on Awkward Array as it developed. The first of these, StrangeLoop, was presented to a non-physicist audience and has a video.
 
    * [Jagged, Ragged, Awkward Arrays](https://www.thestrangeloop.com/2019/jagged-ragged-awkward-arrays.html) at [StrangeLoop](https://www.thestrangeloop.com/2019/sessions.html) on September 14, 2019 ([video](https://youtu.be/2NxWpU7NArk)).
-   * [Awkward 1.0](https://indico.cern.ch/event/833895/contributions/3577882/) at [PyHEP](https://indico.cern.ch/event/833895/) on October 17, 2019.
-   * [Vectorized, imperative, and declarative processing of Awkward Arrays](https://indico.cern.ch/event/773049/contributions/3473258/) at [CHEP](http://chep2019.org/) on November 7, 2019 ([proceedings](https://arxiv.org/abs/2001.06307) to be published in _EPJ Web of Conferences_).
+   * [Awkward 1.0](https://indico.cern.ch/event/833895/contributions/3577882/) at [PyHEP 2019](https://indico.cern.ch/event/833895/) on October 17, 2019.
+   * [Awkward Arrays in Python, C++, and Numba](https://indico.cern.ch/event/773049/contributions/3473258/) at [CHEP 2019](http://chep2019.org/) on November 7, 2019 ([proceedings](https://arxiv.org/abs/2001.06307) to be published in _EPJ Web of Conferences_).
