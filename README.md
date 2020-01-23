@@ -11,6 +11,7 @@
 |:-:|:-:|:-:|:-:|:-:|:-:|
 | Jim Pivarski | _(princeton.edu)_ | United States | Princeton University | _(none)_ | **yes** |
 | Ianna Osborne | _(cern.ch)_ | Switzerland | Princeton University | _(none)_ | no |
+| Peter Elmer | _(cern.ch)_ | United States | Princeton University | _(none)_ | no |
 
 ## Title
 
