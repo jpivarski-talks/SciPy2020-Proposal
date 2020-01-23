@@ -46,11 +46,11 @@ Particle physicists routinely have to manipulate large numbers of complex object
 
 Awkward Array was introduced in September 2018, and it is already one of the most popular pip-installed packages for particle physics. However, there's nothing domain-specific about this intersection of complex data with big data.
 
-After presenting the complexity problem from a particle physics perspective, I would introduce the Awkward Array library by applying it to GeoJSON map files, which already has enough structure to justify why one would want to slice, mask, and vectorize calculations with Awkward Array.
+After presenting the complexity problem from a particle physics perspective, I would introduce the Awkward Array library by applying it to GeoJSON map files, which already have enough structure to justify why one would want to slice, mask, and vectorize calculations with Awkward Array.
 
 ### Columnar data
 
-Just as NumPy's contiguous data structure is key to its performance, Awkward Array relies upon columnar data to be fast and memory-efficient. It may not be obvious how nested, variable-length data can be expressed in a columnar form, so I would take some time to show the layout of columnar data structures and how we can manipulate them without converting them into objects and without copying all of the arrays.
+Just as NumPy's contiguous data structure is key to its performance, Awkward Array relies upon columnar data to be fast and memory-efficient. It may not be obvious how nested, variable-length data can be expressed in a columnar form, so I would take some time to show the layout of columnar data structures and how we can manipulate them without converting them into objects and without copying all of the internal buffers.
 
 ### Enumerating over combinations
 
@@ -66,13 +66,15 @@ Awkward Array is implemented in C++ and bound to Python through pybind11, so man
 
 Numba's ability to JIT-compile Python functions is also very useful for analyzing complex structures. Awkward Arrays have additionally been implemented as Numba extensions, so that they can be used in JIT-compiled Python.
 
+(At the time of the conference, a GPU backend will be in development, but I may be able to show preliminary results.)
+
 ### Conclusions
 
 Although most data analysis tools target rectilinear data, there's nothing domain-specific about nested, variable-length data. I'd like to present Awkward Array to the wider community to see what others might do with it.
 
 Thank you!
 
-_(471 words.)_
+_(494 words.)_
 
 ### References
 
