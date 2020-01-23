@@ -10,7 +10,7 @@
 | Name | Email | Country | Organization | Web page | Corresponding? |
 |:-:|:-:|:-:|:-:|:-:|:-:|
 | Jim Pivarski | _(princeton.edu)_ | United States | Princeton University | _(none)_ | **yes** |
-| Ianna Osborne | _(cern.ch)_ | ? | Princeton University | ? | |
+| Ianna Osborne | _(cern.ch)_ | ? | Princeton University | ? | ? |
 
 ## Title
 
