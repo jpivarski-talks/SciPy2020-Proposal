@@ -74,8 +74,29 @@ _(452 words.)_
 
 ### References
 
-I have given three conference presentations on Awkward Array as it developed. The first of these, StrangeLoop, was presented to a non-physicist audience and has a video.
+I have given three recent conference presentations on Awkward Array.
 
-   * [Jagged, Ragged, Awkward Arrays](https://www.thestrangeloop.com/2019/jagged-ragged-awkward-arrays.html) at [StrangeLoop](https://www.thestrangeloop.com/2019/sessions.html) on September 14, 2019 ([video](https://youtu.be/2NxWpU7NArk)).
-   * [Awkward 1.0](https://indico.cern.ch/event/833895/contributions/3577882/) at [PyHEP 2019](https://indico.cern.ch/event/833895/) on October 17, 2019.
-   * [Awkward Arrays in Python, C++, and Numba](https://indico.cern.ch/event/773049/contributions/3473258/) at [CHEP 2019](http://chep2019.org/) on November 7, 2019 ([proceedings](https://arxiv.org/abs/2001.06307) to be published in _EPJ Web of Conferences_).
+StrangeLoop (computer science audience) on September 14, 2019.
+Video of my presentation: https://youtu.be/2NxWpU7NArk
+
+PyHEP (particle physics audience) on October 17, 2019.
+Abstract and slides: https://indico.cern.ch/event/833895/contributions/3577882/
+
+CHEP (particle physics audience) on November 7, 2019.
+Abstract and slides: https://indico.cern.ch/event/773049/contributions/3473258/
+Proceedings (attached below): https://arxiv.org/abs/2001.06307
+
+## Keywords
+
+   * NumPy
+   * Numba
+   * C++
+   * Apache Arrow
+   * Columnar data
+   * JSON
+
+## Other
+
+**Type of submission:** Talk.
+
+**Specialized track:** High Performance Python (if not General).
