@@ -10,7 +10,7 @@
 | Name | Email | Country | Organization | Web page | Corresponding? |
 |:-:|:-:|:-:|:-:|:-:|:-:|
 | Jim Pivarski | _(princeton.edu)_ | United States | Princeton University | _(none)_ | **yes** |
-| Ianna Osborne | _(cern.ch)_ | ? | Princeton University | ? | ? |
+| Ianna Osborne | _(cern.ch)_ | Switzerland | Princeton University | _(none)_ | no |
 
 ## Title
 
@@ -30,7 +30,7 @@ _(84 words.)_
 
 _(Who is the intended audience for your talk?)_
 
-This talk is intended for data analysts, particularly those who are involved in cleaning data from complex sources, as well as developers who might need to build on or contribute to this library.
+This talk is intended for data analysts, particularly those who are involved in cleaning data from complex sources, as well as developers who might want to collaborate.
 
 _(What, specifically, will attendees learn from your talk?)_
 
@@ -44,47 +44,54 @@ _(Your placement in the program will be based on reviews of your abstract. This 
 
 Particle physicists routinely have to manipulate large numbers of complex objects that represent hierarchical particle decays. Looping over combinations of particles to find candidates that match a given topology is not a preprocessing step or a cleaning step: it _is_ the analysis. This combination of complexity and large datasets has made it difficult for particle physicists to use Python's standard data analysis tools, such as NumPy, Pandas, and xarray.
 
-Awkward Array was introduced in September 2018, and it is already one of the most popular pip-installed packages for particle physics. However, there's nothing domain-specific about this combination of complexity and big data.
+Awkward Array was introduced in September 2018, and it is already one of the most popular pip-installed packages for particle physics. However, there's nothing domain-specific about this intersection of complex data with big data.
 
-After presenting the complexity problem from a particle physics perspective, I would introduce the software by applying it to GeoJSON cartography data, which already has enough structure to justify why one would want to slice, mask, and vectorize calculations with Awkward Array.
+After presenting the complexity problem from a particle physics perspective, I would introduce the Awkward Array library by applying it to GeoJSON map files, which already has enough structure to justify why one would want to slice, mask, and vectorize calculations with Awkward Array.
 
 ### Columnar data
 
-Just as NumPy's contiguous data structure is key to its performance, Awkward Array relies upon columnar data to be fast and memory-efficient. It may not be obvious how nested, unequal-length data can be expressed in a columnar form, so I would take some time to show the layout of columnar data structures and how we can manipulate them without conversion and sometimes without copying.
+Just as NumPy's contiguous data structure is key to its performance, Awkward Array relies upon columnar data to be fast and memory-efficient. It may not be obvious how nested, variable-length data can be expressed in a columnar form, so I would take some time to show the layout of columnar data structures and how we can manipulate them without converting them into objects and without copying all of the arrays.
 
 ### Enumerating over combinations
 
-In particle physics, we often need to iterate through combinations of two or more objects from different collections, so Awkward Array has vectorized functions for building Cartesian products and pairs or triples without replacement. These turn out to be the cross-join and inner-join operations of SQL, but applied independently to each index of equal-length arrays, as though every array element were an SQL table.
+In particle physics, we often need to iterate through combinations of two or more objects from different collections, so Awkward Array has vectorized functions for building Cartesian products and pairs or triples without replacement. These turn out to be the cross-join and inner-join operations of SQL, but applied independently to each index of a set of arrays, as though every array element were an SQL table.
 
 ### Creating Awkward Arrays
 
-It's not enough to manipulate data structures; sometimes they need to be generated from scratch. Awkward Arrays can be appended to, but not changed in place. Our interface for filling arrays also determines their type from the order and choice of fill calls.
+It's not enough to manipulate data structures; sometimes they need to be generated from scratch. Awkward Arrays can be appended to, but not changed in place. Our interface for filling arrays also determines their type from the order and choice of fill commands.
 
 ### C++ and Numba interfaces
 
 Awkward Array is implemented in C++ and bound to Python through pybind11, so many of the methods that can be called from Python can also be called from C++. This allows compiled code and Python to share the same data, which is particularly good for adding array-at-a-time Python interfaces to C++ libraries that generate complex objects.
 
-Numba's ability to JIT-compile Python functions is also very useful for analyzing complex structures. Awkward Arrays have additionally been implemented as Numba extensions, so that these data structures can be used in JIT-compiled Python.
+Numba's ability to JIT-compile Python functions is also very useful for analyzing complex structures. Awkward Arrays have additionally been implemented as Numba extensions, so that they can be used in JIT-compiled Python.
 
 ### Conclusions
 
-Although most data analysis tools target rectilinear data, there's nothing domain-specific about nested, unequal-length data. Awkward Array would probably be useful to the wider community.
+Although most data analysis tools target rectilinear data, there's nothing domain-specific about nested, variable-length data. I'd like to present Awkward Array to the wider community to see what others might do with it.
 
-_(452 words.)_
+Thank you!
+
+_(471 words.)_
 
 ### References
 
 I have given three recent conference presentations on Awkward Array.
 
-StrangeLoop (computer science audience) on September 14, 2019.
-Video of my presentation: https://youtu.be/2NxWpU7NArk
+   * StrangeLoop (computer science audience) on September 14, 2019.
+     Video of my presentation: https://youtu.be/2NxWpU7NArk
 
-PyHEP (particle physics audience) on October 17, 2019.
-Abstract and slides: https://indico.cern.ch/event/833895/contributions/3577882/
+   * PyHEP (particle physics audience) on October 17, 2019.
+     Abstract and slides: https://indico.cern.ch/event/833895/contributions/3577882/
 
-CHEP (particle physics audience) on November 7, 2019.
-Abstract and slides: https://indico.cern.ch/event/773049/contributions/3473258/
-Proceedings (attached below): https://arxiv.org/abs/2001.06307
+   * CHEP (particle physics audience) on November 7, 2019.
+     Abstract and slides: https://indico.cern.ch/event/773049/contributions/3473258/
+     Proceedings (attached below): https://arxiv.org/abs/2001.06307
+
+The old (in use at the time of writing) and new versions of Awkward Array are in two GitHub repos. In the months before SciPy, "awkward-1.0" will move to "awkward-array" and the current "awkward-array" will move to "awkward-0.x", but the "awkward-1.0" redirect will always work.
+
+   * https://github.com/scikit-hep/awkward-array
+   * https://github.com/scikit-hep/awkward-1.0
 
 ## Keywords
 
