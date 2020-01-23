@@ -40,28 +40,31 @@ They will learn how to manipulate nested data structures using vectorized functi
 
 _(Your placement in the program will be based on reviews of your abstract. This should be a roughly 500 word outline of your presentation. This outline should concisely describe software of interest to the SciPy community, tools or techniques for more effective computing, or how scientific Python was applied to solve a research problem. A traditional background/motivation, methods, results, and conclusion structure is encouraged but not required. Links to project websites, source code repositories, figures, full papers, and evidence of public speaking ability are encouraged.)_
 
-### Motivation
+### Motivation and introduction
 
-Particle physicists routinely have to manipulate large numbers of data structures representing hierarchical particle decays. Looping over combinations of particles to find candidates that match a given topology is not a preprocessing or cleaning step: it is the analysis. This combination of complexity and large datasets has delayed the particle physics community's adoption of Python.
+Particle physicists routinely have to manipulate large numbers of complex objects that represent hierarchical particle decays. Looping over combinations of particles to find candidates that match a given topology is not a preprocessing or a cleaning step: it _is_ the analysis. This combination of complexity and large datasets has made it difficult for particle physicists to use Python's data analysis tools, such as NumPy, Pandas, and xarray.
 
-Awkward Array was introduced in September 2018, and it is already one of the most popular pip-installed packages for particle physics. However, this problem of complexity and large scale is not domain-specific.
+Awkward Array was introduced in September 2018, and it is already one of the most popular pip-installed packages for particle physics. However, the problem of complexity and large scale is not domain-specific.
 
 After presenting the complexity problem from a particle physics perspective, I would illustrate the software using simple examples on GeoJSON, which already has enough structure to justify why one would want to slice, mask, and vectorize calculations on Awkward Arrays.
 
 ### Columnar data
 
-Just as NumPy's contiguous data structure is key to its performance, Awkward Array relies upon columnar data to be fast and memory-efficient. It's not obvious how nested, unequal-length data can be expressed in a columnar form, so I would take some time to show how data structures can be built and manipulated.
+Just as NumPy's contiguous data structure is key to its performance, Awkward Array relies upon columnar data to be fast and memory-efficient. It may not be obvious how nested, unequal-length data can be expressed in a columnar form, so I would take some time to show the layout of columnar data structures and how we can manipulate them without conversion.
 
-### Combinatorics
+### Enumerating over combinations
 
-In particle physics, we often need to iterate through combinations of objects, so vectorized functions for building Cartesian products and pairs without replacement have been added to Awkward Array. These turn out to be per-element cross-joins and inner-joins, as though every element of an array were a collection of SQL tables.
+In particle physics, we often need to iterate through combinations of two or more objects from different collections, so Awkward Array has vectorized functions for building Cartesian products and pairs or triples without replacement. These turn out to be the cross-joins and inner-joins of SQL, but applied independently to each index of equal-length arrays.
 
 ### Creating Awkward Arrays
 
-It's not enough to manipulate data structures; sometimes they need to be generated from scratch. 
-
+It's not enough to manipulate data structures; sometimes they need to be generated from scratch. Awkward Arrays can be appended to, but not changed in place. Awkward Array's interface for filling arrays also determines their type from the order and choice of fill calls.
 
 ### C++ and Numba interfaces
+
+Awkward Array is implemented in C++ and bound to Python with pybind11, so many of the methods that can be called from Python can also be called from C++. This allows compiled code and Python to share the same data, which is particularly good for adding array-at-a-time Python interfaces to C++ libraries that generate complex objects.
+
+Numba's ability to JIT-compile Python functions is also very useful for analyzing complex structures. Awkward Array has additionally been implemented as a Numba extension, so that its data structures can be used in JIT-compiled Python.
 
 ### Conclusions
 
