@@ -58,7 +58,7 @@ In particle physics, we often need to iterate through combinations of two or mor
 
 ### Creating Awkward Arrays
 
-It's not enough to manipulate data structures; sometimes they need to be generated from scratch. Awkward Arrays can be appended to, but not changed in place. Our interface for filling arrays also determines their type from the order and choice of fill commands.
+It's not enough to manipulate data structures; sometimes they need to be generated from scratch. Awkward Arrays can be appended to, but not changed in place. Our interface for filling arrays also determines their type dynamically, from the order and choice of fill commands.
 
 ### C++ and Numba interfaces
 
