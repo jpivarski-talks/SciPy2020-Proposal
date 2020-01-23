@@ -64,7 +64,7 @@ It's not enough to manipulate data structures; sometimes they need to be generat
 
 Awkward Array is implemented in C++ and bound to Python through pybind11, so many of the methods that can be called from Python can also be called from C++. This allows compiled code and Python to share the same data, which is particularly good for adding array-at-a-time Python interfaces to C++ libraries that generate complex objects.
 
-Numba's ability to JIT-compile Python functions is also very useful for analyzing complex structures. Awkward Arrays have additionally been implemented as Numba extensions, so that they can be used in JIT-compiled Python.
+Numba's ability to JIT-compile Python functions is also very useful for analyzing complex structures. A second implementation of Awkward Arrays as a Numba extension allows them to be used in JIT-compiled Python.
 
 (At the time of the conference, a GPU backend will be in development, but I may be able to show preliminary results.)
 
