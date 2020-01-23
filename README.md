@@ -70,7 +70,7 @@ Numba's ability to JIT-compile Python functions is also very useful for analyzin
 
 ### Conclusions
 
-Although most data analysis tools target rectilinear data, there's nothing domain-specific about nested, variable-length data. I'd like to present Awkward Array to the wider community to see what others might do with it.
+Although most data analysis tools target rectilinear data, there's nothing domain-specific about nested, variable-length, JSON-like data. I want to present Awkward Array to the wider community to see what other data analysts might do with it.
 
 Thank you!
 
