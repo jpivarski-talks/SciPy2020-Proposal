@@ -23,7 +23,7 @@ _(In the 2019 program, talks about a software library had this form: library nam
 
 _(The brief description which will appear in the online program and give attendees a basic sense of your talk. This should be around 100 words or less.)_
 
-NumPy simplifies and accelerates mathematical calculations in Python, but only for rectilinear arrays of numbers. Awkward Array provides a similar interface for JSON-like data: slicing, masking, broadcasting, and performing vectorized math on the attributes of objects, unequal-length nested lists, and heterogeneous data types. Awkward Arrays are columnar data structures, like (and convertible to/from) Apache Arrow, with a focus on manipulation, rather than serialization/transport. These arrays can be passed between C++ and Python, and they can be used in functions that are JIT-compiled by Numba.
+NumPy simplifies and accelerates mathematical calculations in Python, but only for rectilinear arrays of numbers. Awkward Array provides a similar interface for JSON-like data: slicing, masking, broadcasting, and performing vectorized math on the attributes of objects, unequal-length nested lists (i.e. ragged/jagged arrays), and heterogeneous data types. Awkward Arrays are columnar data structures, like (and convertible to/from) Apache Arrow, with a focus on manipulation, rather than serialization/transport. These arrays can be passed between C++ and Python, and they can be used in functions that are JIT-compiled by Numba.
 
 _(84 words.)_
 
@@ -45,7 +45,7 @@ _(Your placement in the program will be based on reviews of your abstract. This 
 
 Particle physicists routinely have to manipulate large numbers of complex objects that represent hierarchical particle decays. Looping over combinations of particles to find candidates that match a given topology is not a preprocessing step or a cleaning step: it _is_ the analysis. This combination of complexity and large datasets has made it difficult for particle physicists to use Python's standard data analysis tools, such as NumPy, Pandas, and xarray.
 
-Awkward Array was introduced in September 2018, and it is already one of the most popular pip-installed packages for particle physics. However, there's nothing domain-specific about this intersection of complex data with big data.
+Awkward Array was introduced in September 2018, and it has become the basis for a new Python-based ecosystem in our field, including the Scikit-HEP project (https://scikit-hep.org) and PyHEP series of conferences, the third of which will be co-located with SciPy 2020 (https://indico.cern.ch/event/882824). However, there's nothing domain-specific about this intersection of complex data with big data.
 
 After presenting the complexity problem from a particle physics perspective, I would introduce the Awkward Array library by applying it to GeoJSON map files, which already have enough structure to justify why one would want to slice, mask, and vectorize calculations with Awkward Array.
 
@@ -103,6 +103,8 @@ The old (in use at the time of writing) and new versions of Awkward Array are in
    * C++
    * Apache Arrow
    * Columnar data
+   * Ragged array
+   * Jagged array
    * JSON
 
 ## Other
