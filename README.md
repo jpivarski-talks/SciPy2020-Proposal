@@ -55,7 +55,7 @@ Just as NumPy's contiguous data structure is key to its performance, Awkward Arr
 
 ### Enumerating over combinations
 
-In particle physics, we often need to iterate through combinations of two or more objects from different collections, so Awkward Array has vectorized functions for building Cartesian products and pairs or triples without replacement. These turn out to be the cross-join and inner-join operations of SQL, but applied independently to each index of a set of arrays, as though every array element were an SQL table.
+In particle physics, we often need to iterate through combinations of two or more objects from different collections, so Awkward Array has vectorized functions for building per-element Cartesian products and pairs or triples without replacement. These turn out to be the cross-join and inner-join operations of SQL, but applied independently to each index of a set of arrays, as though every array element were an SQL table.
 
 ### Creating Awkward Arrays
 
@@ -75,20 +75,18 @@ Although most data analysis tools target rectilinear data, there's nothing domai
 
 Thank you!
 
-_(494 words.)_
-
 ### References
 
-I have given three recent conference presentations on Awkward Array.
+I have given three recent conference presentations on Awkward Array, one with a video.
 
    * StrangeLoop (computer science audience) on September 14, 2019.
      Video of my presentation: https://youtu.be/2NxWpU7NArk
 
    * PyHEP (particle physics audience) on October 17, 2019.
-     Abstract and slides: https://indico.cern.ch/event/833895/contributions/3577882/
+     Abstract and slides: https://indico.cern.ch/event/833895/contributions/3577882
 
    * CHEP (particle physics audience) on November 7, 2019.
-     Abstract and slides: https://indico.cern.ch/event/773049/contributions/3473258/
+     Abstract and slides: https://indico.cern.ch/event/773049/contributions/3473258
      Proceedings (attached below): https://arxiv.org/abs/2001.06307
 
 The old (in use at the time of writing) and new versions of Awkward Array are in two GitHub repos. In the months before SciPy, "awkward-1.0" will move to "awkward-array" and the current "awkward-array" will move to "awkward-0.x", but the "awkward-1.0" redirect will always work.
