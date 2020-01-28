@@ -103,6 +103,7 @@ The old (in use at the time of writing) and new versions of Awkward Array are in
    * C++
    * Apache Arrow
    * Columnar data
+   * AOS-to-SOA
    * Ragged array
    * Jagged array
    * JSON
